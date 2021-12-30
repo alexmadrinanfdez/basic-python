@@ -13,3 +13,4 @@ and others...
 
 - `intro`
     + `hello.py`: a must in every programming language.
+    + `ascii.py`: accepts as input an integer given by the user and transforms it to an ASCII character.
