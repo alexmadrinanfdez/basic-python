@@ -49,7 +49,7 @@ class Deck:
         if(self.num_cards() >= 52):
             raise Exception("A deck cannot contain more than 52 cards!")
         elif(card.suit not in SUITS or card.value not in VALUES):
-            raise ValueError("That card does belong to this deck.")
+            raise ValueError(f"The {card} does belong to this deck.")
         elif(card in self.cards):
             raise ValueError("A deck can't have duplicate cards!")
         else:
@@ -60,3 +60,20 @@ class Deck:
             print(card, end=', ')
         # remove last comma
         print('\b\b ')
+
+if __name__ == "__main__":
+    deck = Deck()
+    print("The ordered deck:")
+    deck.print_deck()   
+    deck.shuffle()
+    print("\nAfter being shuffled:")
+    deck.print_deck()
+
+    print("\nDraw thrice from the deck:")
+    deck.draw()
+    deck.draw()
+    deck.draw()
+    deck.print_deck()
+
+    card = Card('Swords', 'King') # raises an exception
+    deck.add_card(card)
