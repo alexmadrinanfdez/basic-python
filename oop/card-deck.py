@@ -11,6 +11,12 @@ class Card:
     # represent the object as a string
     def __repr__(self):
         return "{} of {}".format(self.value, self.suit)
+    # define equality between the object of the class
+    def __eq__(self, other):
+        if(self.suit == other.suit and self.value == other.value):
+            return True
+        else:
+            return False
     
     def suit(self):
         return self.suit
@@ -41,9 +47,16 @@ class Deck:
     
     def add_card(self, card):
         if(self.num_cards() >= 52):
-            raise ValueError("A deck cannot contain more than 52 cards!")
+            raise Exception("A deck cannot contain more than 52 cards!")
+        elif(card.suit not in SUITS or card.value not in VALUES):
+            raise ValueError("That card does belong to this deck.")
+        elif(card in self.cards):
+            raise ValueError("A deck can't have duplicate cards!")
         else:
             self.cards.append(card)
     
     def print_deck(self):
-        print(self.cards)
+        for card in self.cards:
+            print(card, end=', ')
+        # remove last comma
+        print('\b\b ')
