@@ -15,7 +15,7 @@ and others...
 - `intro`
     + `hello.py`: a must in every programming language.
     + `ascii.py`: accepts as input an integer given by the user and transforms it to an ASCII character.
-    + `reverse-number.py`: swaps the order of the digits of a number provided by the user.
-    + `prime-number.py`: checks if a given number is a prime number.
+    + `reverse_number.py`: swaps the order of the digits of a number provided by the user.
+    + `prime_number.py`: checks if a given number is a prime number.
 - `oop`
-    + `card-deck.py`: exemplifies Object Oriented Programming defining the classes `Card` and `Deck` to represent a deck of cards.
+    + `card_deck.py`: exemplifies Object Oriented Programming defining the classes `Card` and `Deck` to represent a deck of cards.
