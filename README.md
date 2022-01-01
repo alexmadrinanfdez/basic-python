@@ -19,3 +19,4 @@ and others...
     + `prime_number.py`: checks if a given number is a prime number.
 - `oop`
     + `card_deck.py`: exemplifies Object Oriented Programming defining the classes `Card` and `Deck` to represent a deck of cards.
+    + `stopwatch.py`: start and stop watch that measures time since its creation.
