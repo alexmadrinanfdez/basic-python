@@ -20,3 +20,5 @@ and others...
 - `oop`
     + `card_deck.py`: exemplifies Object Oriented Programming defining the classes `Card` and `Deck` to represent a deck of cards.
     + `stopwatch.py`: start and stop watch that measures time since its creation.
+- `data_structs`
+    + `linked_list.py`: implementation of a linked list.
