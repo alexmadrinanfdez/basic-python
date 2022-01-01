@@ -12,7 +12,7 @@ class LinkedList:
         current = self.head
         out = str()
         # traverse the list
-        while(current.next):
+        while(current):
             out += str(current.value) + " -> "
             current = current.next
         return out
@@ -50,15 +50,33 @@ class LinkedList:
             current.next = current.next.next
         
         self._size -= 1
+    
+    def reverse(self):
+        # keep track of the current, previous and posterior nodes
+        curr = self.head.next
+        prev = None
+        while(curr):
+            post = curr.next
+            curr.next = prev
+            prev = curr
+            curr = post
+        # update the head of the list to point to the first node
+        self.head.next = prev
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     linkedList = LinkedList()
+
     for i in range(1, 6):
         linkedList.add(i)
     print(linkedList)
-    linkedList.remove()
+
+    linkedList.remove(start=True)
     linkedList.remove(start=False)
     print(linkedList)
+
     for i in range(6, 10):
         linkedList.add(i, start=False)
+    print(linkedList)
+
+    linkedList.reverse()
     print(linkedList)
