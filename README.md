@@ -21,4 +21,4 @@ and others...
     + `card_deck.py`: exemplifies Object Oriented Programming defining the classes `Card` and `Deck` to represent a deck of cards.
     + `stopwatch.py`: start and stop watch that measures time since its creation.
 - `data_structs`
-    + `linked_list.py`: implementation of a linked list.
+    + `linked_list.py`: implementation of a linked list, a list where each element (`Node`) points to the next. Includes a reverse method and loop detection.

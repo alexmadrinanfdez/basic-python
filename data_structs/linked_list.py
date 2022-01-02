@@ -62,6 +62,18 @@ class LinkedList:
             curr = post
         # update the head of the list to point to the first node
         self.head.next = prev
+    
+    def has_loop(self):
+        # Floyd’s cycle-finding algorithm
+        slow_ptr = self.head
+        fast_ptr = self.head
+        while(fast_ptr and fast_ptr.next):
+            slow_ptr = slow_ptr.next
+            fast_ptr = fast_ptr.next.next
+            if slow_ptr is fast_ptr:
+                return True
+        else:
+            return False
 
 if __name__ == "__main__":
     linkedList = LinkedList()
@@ -80,3 +92,7 @@ if __name__ == "__main__":
 
     linkedList.reverse()
     print(linkedList)
+
+    print("Does the linked list have a loop?", linkedList.has_loop())
+    linkedList.head.next.next.next.next = linkedList.head.next # artificial loop
+    print("Can the new loop be detected?", linkedList.has_loop())
