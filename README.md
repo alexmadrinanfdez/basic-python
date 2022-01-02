@@ -22,3 +22,4 @@ and others...
     + `stopwatch.py`: start and stop watch that measures time since its creation.
 - `data_structs`
     + `linked_list.py`: implementation of a linked list, a list where each element (`Node`) points to the next. Includes a reverse method and loop detection.
+    + `stack.py`: implementation of a stack. Stacks are linked lists which can only operate (add/remove) from the top of the list.

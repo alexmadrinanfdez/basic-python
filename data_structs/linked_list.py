@@ -40,6 +40,7 @@ class LinkedList:
         assert(self.size() > 0)
         # at the beginnning (push)
         if(start):
+            old = self.head.next
             self.head.next = self.head.next.next
         # at the end (append)
         else:
@@ -47,9 +48,11 @@ class LinkedList:
             # traverse the list
             while(current.next.next):
                 current = current.next
+            old = current.next
             current.next = current.next.next
         
         self._size -= 1
+        return old.value
     
     def reverse(self):
         # keep track of the current, previous and posterior nodes
