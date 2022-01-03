@@ -24,6 +24,7 @@ and others...
     + `linked_list.py`: implementation of a linked list, a list where each element (`Node`) points to the next. Includes a reverse method and loop detection.
     + `stack.py`: implementation of a stack. Stacks are linked lists which can only operate (add/remove) from the top of the list.
     + `queue.py`: implementation of a queue. Also similar to a linked list, the class has been optimized to have constant runtime operations and so it does not inherit directly from the `LinkedList` class.
+    + `hashmap.py`: implementation of a hash map. Stores key-value pairs through a hash function and handles collisions through separate chaining.
 - `algos`
     + `complexity.py`: basic analysis of common orders of growth.
 - `problems`
