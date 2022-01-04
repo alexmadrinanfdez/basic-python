@@ -42,9 +42,11 @@ if __name__ == "__main__":
     queue = Queue()
     for i in range(5):
         queue.enqueue(i)
-    print(queue.items())
+        print(queue.items())
     
     while queue.empty() == False:
-        print(queue.dequeue())
+        queue.dequeue()
+        print(queue.items())
+
     # try to remove from an empty queue
     queue.dequeue()

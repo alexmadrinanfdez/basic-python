@@ -25,6 +25,7 @@ and others...
     + `stack.py`: implementation of a stack. Stacks are linked lists which can only operate (add/remove) from the top of the list.
     + `queue.py`: implementation of a queue. Also similar to a linked list, the class has been optimized to have constant runtime operations and so it does not inherit directly from the `LinkedList` class.
     + `hashmap.py`: implementation of a hash map. Stores key-value pairs through a hash function and handles collisions through separate chaining.
+    + `deque.py`: doubly ended queue. This means it allows addition and removal from both, the front and the back of the queue.
 - `algos`
     + `complexity.py`: basic analysis of common orders of growth.
 - `problems`
