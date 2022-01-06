@@ -31,6 +31,7 @@ and others...
     + `complexity.py`: basic analysis of common orders of growth.
     + `sort`
         * `select_sort.py`: selection sort iteratively searches for the minimum non-sorted element and puts it at the end of the sorted array.
+        * `insert_sort.py`: insertion sort selects the next element in the list and adds it (in the correct order) into the ordered list.
 - `problems`
     + `valid_parenthesis.py`: checks a given string to see if the use of parenthesis is correct. Parenthesis include the following characters: _(_, _)_, _[_, _]_, _{_ and _}_. The string can contain other any character.
     + `sum_subarray.py`: returns the number of contiguous subarrays that sum up less than the target.
