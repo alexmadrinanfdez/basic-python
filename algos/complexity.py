@@ -1,5 +1,3 @@
-import time
-
 # Algorithmic analysis (run time and memory allocation)
 # Common orders of growth:
 
@@ -49,6 +47,8 @@ def exp_runtime(N):
         return exp_runtime(N-1) + exp_runtime(N-1)
 
 if __name__ == "__main__":
+    import time
+    
     const_op = []; const_t = []
     log_op = []; log_t = []
     lin_op = []; lin_t = []
