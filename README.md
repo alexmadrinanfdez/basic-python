@@ -5,6 +5,7 @@ Modified from these tutorials:
 - [x] [Python Software Foundation](https://docs.python.org/3/tutorial/index.html)
 - [x] [Programiz](https://www.programiz.com/python-programming)
 - [x] [W3Schools](https://www.w3schools.com/python/default.asp)
+- [ ] [LeetCode](https://leetcode.com/)
 - [ ] [GeeksforGeeks](https://www.geeksforgeeks.org/python-programming-language/)
 - [ ] [freeCodeCamp](https://www.freecodecamp.org/learn/scientific-computing-with-python/)
 
@@ -30,3 +31,4 @@ and others...
     + `complexity.py`: basic analysis of common orders of growth.
 - `problems`
     + `valid_parenthesis.py`: checks a given string to see if the use of parenthesis is correct. Parenthesis include the following characters: _(_, _)_, _[_, _]_, _{_ and _}_. The string can contain other any character.
+    + `sum_subarray.py`: returns the number of contiguous subarrays that sum up less than the target.
