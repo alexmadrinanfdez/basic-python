@@ -35,6 +35,8 @@ and others...
         * `merge_sort.py`: the **mergesort** algorithm works by dividing the list to order in halves recursively until we end up with single elements. Afterwards, it sorts in a _bottom-up_ manner each half by merging while respecting order.
         * `quick_sort.py`: **quicksort** recursively orders partitions of arbitrary length until every element is sorted.
         * `string_sort.py`: because the number of characters in the alphabet is limited, sorting a string of characters can be made more efficient than general sorting.
+    + `search`
+        * `string`: different pattern matching algorithms.
 - `problems`
     + `valid_parenthesis.py`: checks a given string to see if the use of parenthesis is correct. Parenthesis include the following characters: _(_, _)_, _[_, _]_, _{_ and _}_. The string can contain other any character.
     + `sum_subarray.py`: returns the number of contiguous subarrays that sum up less than the target.
