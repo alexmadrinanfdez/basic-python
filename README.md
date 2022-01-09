@@ -42,3 +42,5 @@ and others...
     + `valid_parenthesis.py`: checks a given string to see if the use of parenthesis is correct. Parenthesis include the following characters: _(_, _)_, _[_, _]_, _{_ and _}_. The string can contain other any character.
     + `sum_subarray.py`: returns the number of contiguous subarrays that sum up less than the target.
     + `palindrome.py`: checks if a string, which can contain any character, is a palindrome.
+    + `fibonacci.py`: compute the Fibonacci series. With and without recursion.
+    + `subsets.py`: returns every possible subset of a list of elements.
