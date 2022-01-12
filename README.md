@@ -28,6 +28,7 @@ and others...
     + `hashmap.py`: implementation of a hash map. Stores key-value pairs through a hash function and handles collisions through separate chaining.
     + `deque.py`: doubly ended queue. This means it allows addition and removal from both, the front and the back of the queue.
     + `trie.py`: implementation of a trie, efficient storage for words that can have additional functionality when the prefix of the word is important.
+    + `bst.py`: implementation of a binary search tree. Similar to a binary tree, but with ordered children, which allows for efficient operations. Each node has two children.
 - `algos`
     + `complexity.py`: basic analysis of common orders of growth.
     + `sort`
