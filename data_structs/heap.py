@@ -24,20 +24,22 @@ class PriorityQueue:
                 r = self.arr[i * 2 + 1]
             else:
                 r = float("-inf")
-            # swap current index with either child
-            if p < l:
-                p, l = l, p
-            elif p < r: 
-                p, r = r, p
-            # heap-ordered
-            else:
+            
+            if l <= p and r <= p:
                 return
+            # swap current index with either child
+            elif r < l:
+                self.arr[i], self.arr[i * 2] = self.arr[i * 2], self.arr[i]
+                i = i * 2
+            else: 
+                self.arr[i], self.arr[i * 2 + 1] = self.arr[i * 2 + 1], self.arr[i]
+                i = i * 2 + 1
 
     def empty(self):
-        return len(arr) == 1
+        return len(self.arr) == 1
 
     def size(self):
-        return len(arr) - 2
+        return len(self.arr) - 2
     
     def insert(self, key):
         self.arr.append(key)
@@ -50,8 +52,9 @@ class PriorityQueue:
     def del_max(self):
         assert not self.empty()
         self.arr[1], self.arr[-1] = self.arr[-1], self.arr[1]
+        old = self.arr.pop()
         self._sink()
-        return self.arr.pop()
+        return old
 
 if __name__ == "__main__":
     from random import randint

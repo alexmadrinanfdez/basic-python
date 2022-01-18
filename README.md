@@ -39,6 +39,7 @@ and others...
         * `merge_sort.py`: the **mergesort** algorithm works by dividing the list to order in halves recursively until we end up with single elements. Afterwards, it sorts in a _bottom-up_ manner each half by merging while respecting order.
         * `quick_sort.py`: **quicksort** recursively orders partitions of arbitrary length until every element is sorted.
         * `string_sort.py`: because the number of characters in the alphabet is limited, sorting a string of characters can be made more efficient than general sorting.
+        * `heap_sort.py`: the binary heap structure can be used to efficiently sort an array.
     + `search`
         * `string`: different pattern matching algorithms.
         * `binary_search`: the binary search algorithm divides the list in halves recursively to search for a given element.

@@ -14,4 +14,4 @@ def string_sort(string):
 
 if __name__ == "__main__":
     s = "the quick brown fox jumps over the lazy dog"
-    print(string_sort(s))
+    print(s, "->", string_sort(s))
