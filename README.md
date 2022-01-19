@@ -49,3 +49,4 @@ and others...
     + `palindrome.py`: checks if a string, which can contain any character, is a palindrome.
     + `fibonacci.py`: compute the Fibonacci series. With and without recursion.
     + `subsets.py`: returns every possible subset of a list of elements.
+    + `pascal.py`: compute the Pascal triangle. With and without recursion.
