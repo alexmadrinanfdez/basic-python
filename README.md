@@ -7,6 +7,7 @@ Modified from these tutorials:
 - [x] [W3Schools](https://www.w3schools.com/python/default.asp)
 - [x] [Brilliant](https://brilliant.org)
 - [ ] [LeetCode](https://leetcode.com)
+- [ ] [Techie Delight](https://www.techiedelight.com)
 - [ ] [GeeksforGeeks](https://www.geeksforgeeks.org/python-programming-language)
 - [ ] [freeCodeCamp](https://www.freecodecamp.org/learn/scientific-computing-with-python)
 
@@ -53,3 +54,5 @@ and others...
     + `pascal.py`: computes the Pascal triangle. Its first row is numbered as zero. With and without recursion.
     + `unique_paths.py`: returns the total number of paths that, starting from the top left square of a given grid (which can include obstacles), lead to the bottom right square.
     + `egg_dropping.py`: class of problems in which it is important to find the correct response without exceeding a (low) number of certain failure states.
+- `bit`
+    + `basic.py`: miscellaneous, simple and useful bitwise operations.
