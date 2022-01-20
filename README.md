@@ -56,3 +56,4 @@ and others...
     + `egg_dropping.py`: class of problems in which it is important to find the correct response without exceeding a (low) number of certain failure states.
 - `bit`
     + `basic.py`: miscellaneous, simple and useful bitwise operations.
+    + `kth_bit.py`: operations with the k'th bit.
