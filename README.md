@@ -57,3 +57,4 @@ and others...
 - `bit`
     + `basic.py`: miscellaneous, simple and useful bitwise operations.
     + `kth_bit.py`: operations with the k'th bit.
+    + `rightmost_set.py`: problems related with the first (rightmost) bit set to one.
