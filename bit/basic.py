@@ -22,6 +22,9 @@ def swap(x: int, y: int) -> (int, int):
         x ^= y
     return x, y
 
+def xor(x:int, y:int) -> int:
+    return (x | y) - (x & y)
+
 if __name__ == "__main__":
     n = 5
     print(f"Is {n} an odd number?", odd(n))
@@ -48,4 +51,6 @@ if __name__ == "__main__":
     x, y = 4, 4
     print((x, y), "->", swap(x, y))
     x, y = 9, 6
-    print((x, y), "->", swap(x, y))
+    print((x, y), "->", swap(x, y), end="\n\n")
+
+    print(f'XOR of {x:b} and {y:b} is {xor(x, y):b}')
