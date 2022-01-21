@@ -6,16 +6,20 @@ def same_sign(x: int, y: int) -> bool:
     # negative: 1...
     return bool((x ^ y) >= 0)
 
-def add_one(n: int) -> int:
+def plus_one(n: int) -> int:
     # -n = ~n + 1
     return -~n
+
+def minus_one(n: int) -> int:
+    # -n = ~n + 1
+    return ~-n
 
 def swap(x: int, y: int) -> (int, int):
     # x ^ x = 0
     if x != y:
-        x = x ^ y
-        y = x ^ y
-        x = x ^ y
+        x ^= y
+        y ^= x
+        x ^= y
     return x, y
 
 if __name__ == "__main__":
@@ -32,9 +36,14 @@ if __name__ == "__main__":
     print(f"Do {x} and {y} have the same sign?", same_sign(x, y), end="\n\n")
 
     n = 0
-    print(f"{n} + 1 =", add_one(n))
+    print(f"{n} + 1 =", plus_one(n))
     n = -1
-    print(f"{n} + 1 =", add_one(n), end="\n\n")
+    print(f"{n} + 1 =", plus_one(n), end="\n\n")
+
+    n = 0
+    print(f"{n} - 1 =", minus_one(n))
+    n = 1
+    print(f"{n} - 1 =", minus_one(n), end="\n\n")
 
     x, y = 4, 4
     print((x, y), "->", swap(x, y))

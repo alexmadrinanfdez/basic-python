@@ -55,6 +55,7 @@ and others...
     + `unique_paths.py`: returns the total number of paths that, starting from the top left square of a given grid (which can include obstacles), lead to the bottom right square.
     + `egg_dropping.py`: class of problems in which it is important to find the correct response without exceeding a (low) number of certain failure states.
 - `bit`
-    + `basic.py`: miscellaneous, simple and useful bitwise operations.
+    + `basic.py`: miscellaneous, simple and useful bit-wise operations.
     + `kth_bit.py`: operations with the k'th bit.
     + `rightmost_set.py`: problems related with the first (rightmost) bit set to one.
+    + `letters.py`: bit-wise operations with letters. They require explicit conversion (in `Python`).
