@@ -41,8 +41,9 @@ class BinarySearchTree:
             return Node(value)
         if curr.value > value:
             curr.left = self._insert(value, curr.left)
-        else:
+        elif curr.value < value:
             curr.right = self._insert(value, curr.right)
+        # do not modify the tree if there is a match
         return curr
 
     def _get(self, value, curr):
@@ -128,6 +129,7 @@ if __name__ == "__main__":
     bst = BinarySearchTree()
     bst.insert(5)
     bst.insert(3)
+    bst.insert(2)
     bst.insert(2)
     bst.insert(4)
     bst.insert(8)

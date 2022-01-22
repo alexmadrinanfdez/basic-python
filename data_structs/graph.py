@@ -49,14 +49,24 @@ class Graph:
             if neighbour == one:
                 return True
         return False
-
-    def bfs(self, source, target):
-        to_visit = deque()
-        visited = set()
-
+    
+    def is_path(self, source, target, method="bfs"):
+        if method == "bfs":
+            to_visit = deque()
+        elif method == "dfs":
+            to_visit = list()
+        else:
+            raise ValueError("Choose a valid method to traverse the graph.")
+        
+        visited = set() # to avoid revisiting nodes
         to_visit.append(source)
         while to_visit:
-            curr = to_visit.popleft()
+            # get next node
+            if method == "bfs":
+                curr = to_visit.popleft()
+            elif method == "dfs":
+                curr = to_visit.pop()
+            # check the node and add neighbours
             if curr not in visited:
                 if curr == target:
                     return True
@@ -65,30 +75,6 @@ class Graph:
                     to_visit.append(neighbour)
         # if never found is not reachable
         return False
-    
-    def _dfs(self, source, target, visited):
-        if source == target:
-            return True
-        if source in visited:
-            return False
-        visited.add(source)
-        for neighbour in self.adj_lst[source]:
-            if self._dfs(neighbour, target, visited):
-                return True
-        # if never found is not reachable
-        return False
-
-    def dfs(self, source, target):
-        visited = set()
-        return self._dfs(source, target, visited)
-    
-    def is_path(self, source, target, method="bfs"):
-        if method == "bfs":
-            return self.bfs(source, target)
-        if method == "dfs":
-            return self.dfs(source, target)
-        
-        raise ValueError("Choose a valid method to traverse the graph.")
 
     def _dfs_path(self, source, path, visited):
         if source in path:
