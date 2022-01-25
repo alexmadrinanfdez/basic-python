@@ -1,6 +1,10 @@
 import math
 
-num = int(input("Enter a number: "))
+try:
+    num = int(input("Enter a number: "))
+except ValueError:
+    print("Next time, enter a number...")
+    exit()
 
 flag = False
 

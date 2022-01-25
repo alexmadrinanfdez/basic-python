@@ -37,5 +37,7 @@ if __name__ == "__main__":
     ps = power_set(superset)
     # because input contains duplicates
     assert len(ss) != len(ps)
+
+    print(superset)
     print("Power set:", ps)
     print("All subsets:", ss)

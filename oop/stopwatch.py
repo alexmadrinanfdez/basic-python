@@ -16,9 +16,12 @@ class Stopwatch:
 
 if __name__ == "__main__":
     import sys
+
     sw = Stopwatch()
-    secs = float(sys.argv[1])
-
-    time.sleep(secs)
-
-    print("Elapsed time (in seconds) is", sw.lap(unit='s'))
+    try:
+        secs = float(sys.argv[1])
+        print("Waiting...")
+        time.sleep(secs)
+        print("Elapsed time (in seconds) is", sw.lap(unit='s'))
+    except IndexError:
+        print("Usage: python", sys.argv[0], "<time>")

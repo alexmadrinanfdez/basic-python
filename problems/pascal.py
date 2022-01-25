@@ -33,6 +33,11 @@ def pascal(n):
     return triag
 
 if __name__ == "__main__":
-    triangle = pascal(10)
-    for row in triangle:
-        print(row)
+    import sys
+
+    try:
+        triangle = pascal(int(sys.argv[1]))
+        for row in triangle:
+            print(row)
+    except IndexError:
+        print("Usage: python", sys.argv[0], "<rows>")

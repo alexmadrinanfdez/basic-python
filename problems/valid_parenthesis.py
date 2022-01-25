@@ -24,8 +24,11 @@ def is_valid_parenthesis(s):
 
 if __name__ == "__main__":
     import sys
-    s = sys.argv[1]
-    if is_valid_parenthesis(s):
-        print("Correct use of parenthesis.")
-    else:
-        print("There is an error in the use of parenthesis.")
+    try:
+        s = sys.argv[1]
+        if is_valid_parenthesis(s):
+            print("Correct use of parenthesis.")
+        else:
+            print("There is an error in the use of parenthesis.")
+    except IndexError:
+        print("Usage: python", sys.argv[0], "'<phrase>'")

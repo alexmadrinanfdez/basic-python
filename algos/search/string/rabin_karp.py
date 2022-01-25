@@ -25,7 +25,7 @@ def rabin_karp_match(txt, pat):
         # remove leading digit, add trailing digit
         if i < N-M: 
             t = (d * (t-ord(txt[i]) * h) + ord(txt[i+M])) % q
-            # we might get negative values of t
+            # it might result in negative values of t
             if t < 0:
                 t = t + q
     return pos

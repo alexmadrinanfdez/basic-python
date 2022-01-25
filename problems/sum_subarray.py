@@ -5,6 +5,7 @@ def num_subarr_sum(arr, k):
     beg = -1
     for end in range(len(arr)):
         tot += arr[end]
+        # shorten subarray until it meets condition
         while tot > k:
             beg += 1
             tot -= arr[beg]
