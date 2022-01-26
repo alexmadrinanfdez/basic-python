@@ -47,7 +47,7 @@ and others...
         * `binary_search`: the binary search algorithm divides the list in halves recursively to search for a given element.
 - `problems`
     + `valid_parenthesis.py`: checks a given string to see if the use of parenthesis is correct. Parenthesis include the following characters: _(_, _)_, _[_, _]_, _{_ and _}_. The string can contain other any character.
-    + `sum_subarray.py`: returns the number of contiguous subarrays that sum up less than the target.
+    + `sum_subarray.py`: problems involving sums of sub-arrays. A sub-array  is a **contiguous** part of an array.
     + `palindrome.py`: checks if a string, which can contain any character, is a palindrome.
     + `fibonacci.py`: computes the Fibonacci series. With and without recursion.
     + `subsets.py`: returns every possible subset of a list of elements.
