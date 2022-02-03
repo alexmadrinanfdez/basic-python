@@ -48,7 +48,6 @@ and others...
 - `problems`
     + `valid_parenthesis.py`: checks a given string to see if the use of parenthesis is correct. Parenthesis include the following characters: _(_, _)_, _[_, _]_, _{_ and _}_. The string can contain other any character.
     + `sum_subarray.py`: problems involving sums of sub-arrays. A sub-array  is a **contiguous** part of an array.
-    + `palindrome.py`: checks if a string, which can contain any character, is a palindrome.
     + `fibonacci.py`: computes the Fibonacci series. With and without recursion.
     + `subsets.py`: returns every possible subset of a list of elements.
     + `pascal.py`: computes the Pascal triangle. Its first row is numbered as zero. With and without recursion.
@@ -56,6 +55,9 @@ and others...
     + `egg_dropping.py`: class of problems in which it is important to find the correct response without exceeding a (low) number of certain failure states.
     + `roman_numeral.py`: translates from roman numbers to alphanumeric integers.
     + `count_primes.py`: returns the number of prime numbers that are strictly less than a given integer.
+    + `string`
+        * `palindrome.py`: checks if a string, which can contain any character, is a palindrome.
+        * `isomorphic.py`: checks if two strings are isomorphic.
 - `bit`
     + `basic.py`: miscellaneous, simple and useful bit-wise operations.
     + `kth_bit.py`: operations with the k'th bit.
