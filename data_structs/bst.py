@@ -108,6 +108,12 @@ class BinarySearchTree:
         print(curr.value, end=' ')
         self._traversal(curr.right)
     
+    def _invert(self, node):
+        if node:
+            node.left, node.right = \
+            self._invert(node.right), self._invert(node.left)
+            return node
+    
     def height(self):
         return self._height(self.root)
 
@@ -124,6 +130,9 @@ class BinarySearchTree:
     
     def traversal(self):
         return self._traversal(self.root)
+    
+    def invert(self):
+        self._invert(self.root)
 
 if __name__ == "__main__":
     bst = BinarySearchTree()
@@ -141,8 +150,14 @@ if __name__ == "__main__":
     print("Is 5 in the tree?", bst.get(5), end="\n\n")
     bst.delete(6)
     bst.delete(5)
+    bst.insert(7)
     print(bst)
     print("Is 5 still in the tree?", bst.get(5))
+    print("Is 7 now in the tree?", bst.get(7))
     print("The height of the tree is", bst.height())
+    print("Tree inversion results in a non-search tree:")
+    bst.invert()
+    print(bst)
+    bst.invert() # invert again to keep properties
     print("The nodes in order are:", end=' ')
     bst.traversal()
