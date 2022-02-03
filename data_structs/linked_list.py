@@ -77,6 +77,17 @@ class LinkedList:
             return True
         except:
             return False
+    
+    def get_intersection(lla, llb):
+        pa, pb = lla.head, llb.head
+        while pa is not pb:
+            # if either pointer hits the end
+            # switch head and continue the second traversal
+            pa = llb.head if not pa else pa.next
+            pb = lla.head if not pb else pb.next
+        # only 2 ways to get out of the loop 
+        # they meet or they both hit the end = None
+        return pa
 
 if __name__ == "__main__":
     linkedList = LinkedList()
@@ -97,5 +108,14 @@ if __name__ == "__main__":
     print(linkedList)
 
     print("Does the linked list have a loop?", linkedList.has_cycle())
-    linkedList.head.next.next.next.next = linkedList.head.next # artificial loop
+    # artificial loop
+    linkedList.head.next.next.next.next = linkedList.head.next
     print("Can the new loop be detected?", linkedList.has_cycle())
+
+    other_ll = LinkedList()
+    other_ll.add(4)
+    other_ll.add(5)
+    other_ll.add(1)
+    other_ll.head.next.next.next = linkedList.head
+    intersec = LinkedList.get_intersection(linkedList, other_ll)
+    print("Where is the intersection? At value", intersec.value)
