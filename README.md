@@ -56,8 +56,9 @@ and others...
     + `roman_numeral.py`: translates from roman numbers to alphanumeric integers.
     + `count_primes.py`: returns the number of prime numbers that are strictly less than a given integer.
     + `string`
-        * `palindrome.py`: checks if a string, which can contain any character, is a palindrome.
-        * `isomorphic.py`: checks if two strings are isomorphic.
+        * `palindrome.py`: checks if a string, which can contain any character, is a palindrome. A string is a palindrome if the first half of the string is equal to the second half.
+        * `isomorphic.py`: checks if two strings are isomorphic. Two strings are isomorphic if characters in one of them can be replaced to get the other.
+        * `anagram.py`: checks if two strings are anagrams. Two strings are anagrams if characters in one of them can be rearranged to get the other.
 - `bit`
     + `basic.py`: miscellaneous, simple and useful bit-wise operations.
     + `kth_bit.py`: operations with the k'th bit.
