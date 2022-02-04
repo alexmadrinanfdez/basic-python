@@ -25,6 +25,18 @@ def swap(x: int, y: int) -> (int, int):
 def xor(x:int, y:int) -> int:
     return (x | y) - (x & y)
 
+def add(a: int, b: int) -> int:
+    # 32 bits integer max (leading '0')
+    MAX = 0x7FFFFFFF
+    # mask to get last 32 bits
+    mask = 0xFFFFFFFF
+    while b != 0:
+        # ^ get different bits and & gets double 1s, << moves carry
+        a, b = (a ^ b) & mask, ((a & b) << 1) & mask
+    # if a is negative, get a's 32 bits complement positive first
+    # then get 32-bit positive's Python complement negative
+    return a if a <= MAX else ~(a ^ mask)
+
 if __name__ == "__main__":
     n = 5
     print(f"Is {n} an odd number?", odd(n))
@@ -53,4 +65,6 @@ if __name__ == "__main__":
     x, y = 9, 6
     print((x, y), "->", swap(x, y), end="\n\n")
 
-    print(f'XOR of {x:b} and {y:b} is {xor(x, y):b}')
+    print(f'XOR of {x:b} and {y:b} is {xor(x, y):b}', end="\n\n")
+
+    print(f'{x} + {y} =', add(x, y))
