@@ -114,6 +114,16 @@ class BinarySearchTree:
             self._invert(node.right), self._invert(node.left)
             return node
     
+    def _trim(self, node, lo, hi):
+        if node:
+            if node.value < lo:
+                return self._trim(node.right, lo, hi)
+            if node.value > hi:
+                return self._trim(node.left, lo, hi)
+            node.left = self._trim(node.left, lo, hi)
+            node.right = self._trim(node.right, lo, hi)
+        return node
+    
     def height(self):
         return self._height(self.root)
 
@@ -133,6 +143,11 @@ class BinarySearchTree:
     
     def invert(self):
         self._invert(self.root)
+    
+    def trim(self, lo: int, hi: int):
+        if hi < lo:
+            raise ValueError("The upper limit is smaller than the lower!")
+        self._trim(self.root, lo, hi)
 
 if __name__ == "__main__":
     bst = BinarySearchTree()
@@ -147,12 +162,11 @@ if __name__ == "__main__":
     print(bst)
     print("Is 4 in the tree?", bst.get(4))
     print("Is 7 in the tree?", bst.get(7))
-    print("Is 5 in the tree?", bst.get(5), end="\n\n")
-    bst.delete(6)
-    bst.delete(5)
+    print("Is 8 in the tree?", bst.get(5), end="\n\n")
+    bst.trim(3, 6)
     bst.insert(7)
     print(bst)
-    print("Is 5 still in the tree?", bst.get(5))
+    print("Is 8 still in the tree?", bst.get(8))
     print("Is 7 now in the tree?", bst.get(7))
     print("The height of the tree is", bst.height())
     print("Tree inversion results in a non-search tree:")
