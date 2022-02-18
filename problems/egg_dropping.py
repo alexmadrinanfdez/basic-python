@@ -30,6 +30,7 @@ def drops_iterative(n, f):
     return dp[-1][-1]
 
 def drops(n, f):
+    # https://brilliant.org/wiki/egg-dropping/
     pass
 
 if __name__ == "__main__":

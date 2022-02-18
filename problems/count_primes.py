@@ -11,7 +11,7 @@ def count_primes(n: int) -> int:
     while i * i < n:
         if sieve[i]:
             sieve[i*i:n:i] = [0] * len(sieve[i*i:n:i])
-        i += 1 if i == 2 else 2
+        i += 1
     return sum(sieve)
 
 if __name__ == "__main__":
