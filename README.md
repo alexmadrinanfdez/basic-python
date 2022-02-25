@@ -47,7 +47,6 @@ and others...
         * `binary_search`: the binary search algorithm divides the list in halves recursively to search for a given element.
 - `problems`
     + `valid_parenthesis.py`: checks a given string to see if the use of parenthesis is correct. Parenthesis include the following characters: _(_, _)_, _[_, _]_, _{_ and _}_. The string can contain other any character.
-    + `sum_subarray.py`: problems involving sums of sub-arrays. A sub-array  is a **contiguous** part of an array.
     + `fibonacci.py`: computes the Fibonacci series. With and without recursion.
     + `pascal.py`: computes the Pascal triangle. Its first row is numbered as zero. With and without recursion.
     + `unique_paths.py`: returns the total number of paths that, starting from the top left square of a given grid (which can include obstacles), lead to the bottom right square.
@@ -61,6 +60,9 @@ and others...
     + `combinatorial`
         * `subsets.py`: returns every possible subset of a list of elements. With and without considering duplicate elements.
         * `permutations.py`: returns every possible permutation of elements in an array.
+    + `array`
+        * `sum_subarray.py`: problems involving sums of sub-arrays. A sub-array  is a **contiguous** part of an array.
+        * `merge_intervals.py`: given an array of intervals (where `intervals[i] =[start_i, end_i]`), merge all overlapping intervals.
 - `bit`
     + `basic.py`: miscellaneous, simple and useful bit-wise operations.
     + `kth_bit.py`: operations with the k'th bit.
