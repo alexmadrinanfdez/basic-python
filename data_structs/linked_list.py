@@ -38,18 +38,18 @@ class LinkedList:
     
     def remove(self, start=True):
         assert(self.size() > 0)
-        # at the beginnning (push)
+        # at the beginnning (pop)
         if(start):
             old = self.head.next
-            self.head.next = self.head.next.next
-        # at the end (append)
+            self.head.next = old.next
+        # at the end
         else:
             current = self.head
             # traverse the list
             while(current.next.next):
                 current = current.next
             old = current.next
-            current.next = current.next.next
+            current.next = old.next
         
         self._size -= 1
         return old.value
@@ -70,7 +70,7 @@ class LinkedList:
         # Floyd’s cycle-finding algorithm
         try:
             slow_ptr = self.head
-            fast_ptr = self.head
+            fast_ptr = self.head.next
             while slow_ptr is not fast_ptr:
                 slow_ptr = slow_ptr.next
                 fast_ptr = fast_ptr.next.next
