@@ -23,11 +23,6 @@ class BinarySearchTree:
             str_out += '\n'
         return str_out
 
-    def _height(self, curr):
-        if not curr:
-            return 0
-        return max(self._height(curr.left), self._height(curr.right)) + 1
-    
     def _helper_print(self, curr, height, lo, hi, out):
         if not curr:
             return
@@ -35,6 +30,14 @@ class BinarySearchTree:
         out[height][mid] = str(curr.value)
         self._helper_print(curr.left, height+1, lo, mid-1, out)
         self._helper_print(curr.right, height+1, mid+1, hi, out)
+
+    def _height(self, curr):
+        if not curr:
+            return 0
+        return max(self._height(curr.left), self._height(curr.right)) + 1
+
+    def height(self):
+        return self._height(self.root)
 
     def _insert(self, value, curr):
         if not curr:
@@ -46,6 +49,10 @@ class BinarySearchTree:
         # do not modify the tree if there is a match
         return curr
 
+    def insert(self, value):
+        # update every traversed node
+        self.root = self._insert(value, self.root)
+
     def _get(self, value, curr):
         if not curr:
             return False
@@ -55,7 +62,10 @@ class BinarySearchTree:
             return self._get(value, curr.left)
         else:
             return self._get(value, curr.right)
-    
+
+    def get(self, value):
+        return self._get(value, self.root)
+
     def _substitute(self, curr, lt):
         # either find largest element in left subtree...
         if lt:
@@ -99,7 +109,11 @@ class BinarySearchTree:
                     return curr.right
         # in case the node is not found, return current node
         return curr
-    
+
+    def delete(self, value):
+        # update every traversed node
+        self.root = self._delete(value, self.root)
+
     def _traversal(self, curr):
         if not curr:
             return
@@ -107,13 +121,19 @@ class BinarySearchTree:
         self._traversal(curr.left)
         print(curr.value, end=' ')
         self._traversal(curr.right)
-    
+
+    def traversal(self):
+        return self._traversal(self.root)
+
     def _invert(self, node):
         if node:
             node.left, node.right = \
-            self._invert(node.right), self._invert(node.left)
+                self._invert(node.right), self._invert(node.left)
             return node
-    
+
+    def invert(self):
+        self._invert(self.root)
+
     def _trim(self, node, lo, hi):
         if node:
             if node.value < lo:
@@ -123,26 +143,6 @@ class BinarySearchTree:
             node.left = self._trim(node.left, lo, hi)
             node.right = self._trim(node.right, lo, hi)
         return node
-    
-    def height(self):
-        return self._height(self.root)
-
-    def insert(self, value):
-        # update every node of the tree
-        self.root = self._insert(value, self.root)
-
-    def get(self, value):
-        return self._get(value, self.root)
-
-    def delete(self, value):
-        # update every node of the tree
-        self.root = self._delete(value, self.root)
-    
-    def traversal(self):
-        return self._traversal(self.root)
-    
-    def invert(self):
-        self._invert(self.root)
     
     def trim(self, lo: int, hi: int):
         if hi < lo:
@@ -162,16 +162,19 @@ if __name__ == "__main__":
     print(bst)
     print("Is 4 in the tree?", bst.get(4))
     print("Is 7 in the tree?", bst.get(7))
-    print("Is 8 in the tree?", bst.get(5), end="\n\n")
+    print("Is 8 in the tree?", bst.get(8), end="\n\n")
     bst.trim(3, 6)
     bst.insert(7)
     print(bst)
     print("Is 8 still in the tree?", bst.get(8))
     print("Is 7 now in the tree?", bst.get(7))
     print("The height of the tree is", bst.height())
-    print("Tree inversion results in a non-search tree:")
+    print("Tree inversion results in a non-search tree:", end="\n\n")
     bst.invert()
     print(bst)
     bst.invert() # invert again to keep properties
     print("The nodes in order are:", end=' ')
     bst.traversal()
+    print("\nDeleting the root of the tree:", end="\n\n")
+    bst.delete(5)
+    print(bst)
