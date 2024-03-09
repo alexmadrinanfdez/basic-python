@@ -18,7 +18,7 @@ def log_runtime(N):
 # Linear: O(N)
 def lin_runtime(N):
     cnt = 0
-    for i in range(N):
+    for _ in range(N):
         cnt += 1
     return cnt
 
@@ -34,8 +34,8 @@ def nlog_runtime(N):
 # Polynomial: O(N^C) -> quadratic: O(N^2)
 def quad_runtime(N):
     cnt = 0
-    for i in range(N):
-        for j in range(N):
+    for _ in range(N):
+        for _ in range(N):
             cnt += 1
     return cnt
 
@@ -50,13 +50,14 @@ if __name__ == "__main__":
     import time
     
     const_op = []; const_t = []
-    log_op = []; log_t = []
-    lin_op = []; lin_t = []
-    nlog_op = []; nlog_t = []
-    quad_op = []; quad_t = []
-    exp_op = []; exp_t = []
+    log_op   = []; log_t   = []
+    lin_op   = []; lin_t   = []
+    nlog_op  = []; nlog_t  = []
+    quad_op  = []; quad_t  = []
+    exp_op   = []; exp_t   = []
 
-    for i in range(5):
+    n = 5
+    for i in range(n):
         N = 2 ** i
 
         start = time.time()
